@@ -1,0 +1,30 @@
+// Rest Parameter / Property: 
+// It is a special parameter which is used to hold all the remaining arguments in array format
+// Rest Parameter should be always last parameter in function
+// It looks like spread operator but it used for different purpose
+// Syntax: 
+    // ...<ParameterName>
+
+function getData(x, y){
+    console.log(x,y)
+}
+
+getData(10, 20, 30, 40, 50) 
+// in this case without Rest Parameter, 10 will be stored in  x, 20 will be stored in y and rest of arguments will be ignored
+// If we want to hold rest of the arguments, then we can pass Rest parameter as a last parameter to function
+function getRemainingData(x, y, ...data){
+    console.log(x,y,data)
+}
+
+getRemainingData(10, 20, 30, 40, 50) 
+
+//Diff B/W Spread operator and Rest Paramater
+// ===============================================================================================
+// Spread                               // Rest Paramter
+// ===============================================================================================
+// 1. it is a operator                  // 1. it is a parameter
+// 2. we will use this in block         // 2. we will pass this as parameter to function
+// 3. It is used to copy values of      // 3. It is used to hold rest of arguments in array format
+//    one array to another
+// 4. ...<OBJ or ARR name>              // 4. ...<ParameterName>
+// ===============================================================================================

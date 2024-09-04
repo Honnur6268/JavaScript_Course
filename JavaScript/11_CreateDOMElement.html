@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Element</title>
+    <script>
+      function createNewButton(){
+        var btnRef = document.createElement('button');
+        var h2Ref = document.createElement("h2");
+
+        h2Ref.innerText = "Button is created using Javascript";
+        btnRef.innerText = "Remove JS DOM"
+        btnRef.style.color = "black";
+        btnRef.style.border = "2px solid grey";
+        btnRef.style.padding = "15px 25px";
+        btnRef.style.backgroundColor = "aliceblue";
+        btnRef.style.marginTop = "10px"
+
+        btnRef.onclick = function () {
+            // h2Ref.style.color = "green";
+          h2Ref.remove();
+          btnRef.remove();
+        };
+        document.getElementById("body").appendChild(h2Ref);
+        document.getElementById('body').appendChild(btnRef)
+
+
+        // To Check how many attributes are in objects
+        var count = 0;
+        for(let x in document){
+            count++;
+            console.log(x)
+        }
+        console.log("Total Attributes Count:",count)
+      }
+    </script>
+  </head>
+  <body id="body">
+      <h2>Create New Button</h2>
+      <button onclick="createNewButton()">New Button</button>
+  </body>
+</html>

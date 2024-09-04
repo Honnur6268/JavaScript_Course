@@ -1,0 +1,117 @@
+JavaScript: 
+	
+Developed by Brendan Eich in 1995 when he was working as an engineer in Netscape
+Initially named Mocha, and then renamed to LiveScript and again renamed to JavaScript( due to popularity of Java Program)
+
+--> ECAM is a standard organization for information and communication systems. It acquired its current name in 1994, when the European Computer Manufacturers Association (ECMA) changed it name to reflect the organization's global reach and activities.
+--> JS become an ECMA standard in 1997 with the release of ECMAScript 1 or ES1.
+--> ES is a specification which is used by JS language.
+
+JavaScript is a programming language which was created for making webpages dynamic and more interactive to the user.
+
+	*. JS is a programming language for web pages.
+	*. It was created to make webpages more dynamic and interactive.
+	*. With JS, you can access webpage elements and you can manipulate them.
+	*. JS programs can be used to handle events on a webpage, like click of a button 		element.
+Note: JS was initially created to run and execute inside browsers. This is the reason why, it was also called as client-side programming language.
+
+Note: JavaScript is a loosely typed language. It can be difficult to understand what types of data are being passed around in JavaScript.
+
+A Programming language can be classified inti two types:
+	1. Client-Side Language
+	2. Server-Side Language
+
+Client-Side Language: A client-side language requires browsers to run the program on the client machine but does not interact with the server while processing the client-side code.
+
+Server-Side Language: The programming language which can be executed on a server is called as server-side language. A server-side programming language is used to process received data on a server and sends the result back to the client i.e. browser. A server-side language involves a server for its processing.
+
+Note: Modern JS can be used as both client-side and server-side programming language.
+
+JS is one of the three, core languages of web design and development, along with HTML and CSS. It is used in webpages to add functionality.
+
+You can use JS:
+	*. To make a webpage dynamic and more interactive instead of displaying a static 		webpage.
+	*. You can use JS to create Mobile apps, desktop apps and even develop a game.
+	*. You can also use JS as a server-side language for backend development.
+	*. You can use JS to validate user inputs in a form before submitting to the 			server.
+	*. You can use asynchronous JS codes to perform long running tasks like loading 		data from backend, without blocking the user interface. This will give an 		amazing experience to your website users.
+
+Limitations of Client-Side JS:
+	*. Client-Side JS does not allow reading and writing of files on the hard disk, 		copy them or execute any program.
+	*. JS from one page may not access the other if they come from different sites i.e. 		from a diff domain, protocol or port. This is called the "Same Origin 			Policy".
+	*. JS does not have any multi-threading or multi-processor capabilities. JS is a 		single threaded programming language.
+
+
+A client-side program is always attached to a webpage i.e. to an HTML document. When this HTML document is loaded inside a browser, the JS code attached to this HTML also  gets executed.
+
+There are 2 ways to attach a JS program to an HTML document:
+1. Inline JS (using <script>JS code</script>)
+2. External JS (using src attribute of script tag)
+
+Data Types: 2 types
+1. Primitive Data Type
+	1. Number -- number || decimal
+	2. string -- characters within " " or ' ' or ` `
+	3. boolean -- true || false
+	4. undefined
+	5. null -- (special data type comes under object type of special primitive type)
+	6. Bigint -- value after 2 power of 53-1 
+	7. Symbol -- value which is consutructed using Symbol() constructor
+2. Non-Primitive Data Type
+	8. object -- any value consist of object or array
+
+JavaScript is,
+-> Dynamically Typed: Means that, the datatype is automatically assigned to a variable based on the value we are storing in it and we do not have to manually specify the datatype.
+
+-> Type Coercion: happens when JS converts value of one datatype to another datatype automatically.
+
+
+Modal Windows in JS:
+-> There are 3 modal windows in JS which is used to interact with the users. These are,
+	1. alert() - used to show message using alert(args)
+	2. prompt() - display a message and an input filed 
+		--> prompt("msg", defaultValue)
+	3. confirm() - used to show a modal window with a question and two buttons: OK & 		Cancel.
+		--> returns true or false.
+-> When a modal window appears, the user cannot interact with the rest of the page like 	scrolling up or don, click a button or other interaction unless he has dealt with 	the window.
+
+Value Type & Reference Type:
+--> A variable can either store a value directly or it can store reference to a memory 	address where the value is actually stored. Based on that we can also classify data 	as Value Type & Reference Type
+--> When we create a variable in JS, the value assigned to that variable is stored 	somewhere in the memory. The memory can be classified into 2 types,
+	2. Stack Memory
+	3. Heap Memory
+
+Value Type: When a type stores a value assigned to it, it is called as value type. All primitive data types in JavaScript are value types.
+	-> The values of value type / primitive type are stored & executed in stack memory.
+
+Reference Type: When a type does not store a value directly, but it stores the memory address(reference) of the value where it is actually stored, it is called as reference type. Every value except primitive types are reference type in JS.
+	-> The values of reference type like objects, functions, arrays etc. are stored & 		executed in heap memory.
+
+Note: When we create a variable or a function, we give a name to that variable. That name is called as an identifier. An identifier always stores value from stack memory.
+
+
+JavaScript Engine and JIT Compiler(JUST IN TIME):
+JavaScript code will execute in following steps,
+
+				AST(Abstract Tree)
+JS Code =======> Code Parsing =======> JUST IN TIME Compiler =======> Program Running
+						       ^		      ^
+						       ||		      ||
+							=====Optimization======
+
+
+Execution Context & Call Stack:
+An Execution context is an environment inside which a piece of JS code get's executed. It is like a container that stress all the necessary information about a function or a piece of code like local variables, arguments etc..
+
+
+Scope:
+A scope controls how JS variables & functions are organized and accessed by JS engine. A scope tells, where a JS variable or function is created and when they can be.
+1. Global Scope: The top-level code i.e. the variable & functions that are not present 	inside any other function or any other code block, is called as global variable or 	global function. They have global scope.
+
+2. Function Scope: Each & every function in JS creates its own scope. The variables & 	functions declared inside any function, are only accessible inside that function. 	They will have Function Scope.
+
+3. Block Scope: Variables declared using let or const, inside a code block, is only 	accessible inside that block and not outside of it. This is called as block scope.
+
+Lexical Scope: 
+--> Lexical scoping means that the way the variables & functions are organized and accessed is entirely controlled by the placement of function and of code blocks inside the program code.
+--> If a function or code block is sitting lexically within another scope, then that function or code block will have access to all variables & functions declared inside its parent scope.

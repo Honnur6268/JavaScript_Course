@@ -1,0 +1,82 @@
+<!-- DOM: Document Object Modal : It looks tree like struture
+-> The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document. 
+-->
+<!-- We can access html element In JS 
+  -> getElementById
+  -> getElementByTagName
+  -> getElementByClassName
+  -> getElementByName
+-->
+
+<!--
+innerText: 
+    -> Content of the selected element will be replaced.
+    -> If we pass html tag also it will consider it as text only.(broweser will not consider)
+innerHTML: 
+    -> Content of selected element will be replaced.
+    -> We can pass html tags 
+outerText:
+    -> It will replace the entire tag element which is referring without considering any html tags
+outerHtml:
+    -> It will replace the entire tag element which is referring with any html tags  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function changeContent() {
+        document.getElementById("title").innerHTML =
+          "<h1>Document Object Modal</h1>";
+        document.getElementById("para").innerText = "Hello DOM";
+        document.getElementById("button").innerText = "Changed";
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2 id="title">DOM</h2>
+      <p id="para">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem
+        possimus, asperiores autem atque nulla porro velit necessitatibus unde
+        quos tempora, praesentium facere perspiciatis. Perferendis aspernatur,
+        molestias aperiam inventore incidunt eos? Asperiores dolorem nemo
+        voluptate iste dolorum perferendis numquam possimus porro. Tenetur,
+        minus. Id officiis consequuntur soluta praesentium voluptate velit error
+        similique dolore et quae aliquam reprehenderit atque veniam, a labore?
+        Ut quaerat accusamus commodi quos deleniti, vel libero quasi iure?
+        Reprehenderit vel earum excepturi dolores ratione labore saepe animi,
+        quo sunt quos? Necessitatibus, corporis velit. Impedit vel rerum
+        laudantium quos! Corporis distinctio debitis beatae, dicta odio eveniet
+        animi expedita libero aliquam quia laborum? Ex, maiores. Voluptatem
+        facilis est accusamus ipsa, inventore porro nihil ea suscipit
+        consequatur. Incidunt sapiente nesciunt quasi. Consectetur earum
+        inventore cupiditate! Harum, culpa itaque et maxime deserunt omnis
+        mollitia, natus ullam vero dolorum a suscipit facilis aperiam, maiores
+        doloremque ab eveniet repudiandae molestias accusamus rem earum odio.
+        Iste ipsam assumenda temporibus autem. Accusantium saepe, tenetur
+        eveniet et voluptates qui, debitis porro, asperiores nostrum eum iusto
+        sit ratione earum optio ipsam labore mollitia praesentium veritatis
+        reprehenderit molestiae provident. Tempora ipsum ut accusantium
+        architecto dolorum, porro assumenda ducimus, necessitatibus consectetur
+        earum totam nisi at sint repellat animi optio expedita! Consequuntur
+        iure, magni assumenda expedita eius ducimus odio excepturi accusamus.
+        Ipsam consequatur sit, modi fuga facilis totam rem, corrupti obcaecati
+        hic officiis quasi laudantium nostrum quis dolorum ratione dolores
+        quaerat in, odit ex ducimus cupiditate culpa animi? Facere, perferendis
+        temporibus? Adipisci, iure similique ab eum eius excepturi enim saepe
+        magnam rerum voluptates in! Atque eaque ducimus sunt quibusdam
+        repellendus explicabo ratione dolorum, deserunt laudantium totam tenetur
+        rem a nulla harum. Culpa, odit blanditiis. Obcaecati quod cumque illo
+        distinctio nobis sunt similique repudiandae non numquam magnam quasi
+        atque provident maxime, nostrum quam a, ipsam fugit voluptatum. Nam
+        omnis neque ipsa eaque?
+      </p>
+    </div>
+    <button id="button" onclick="changeContent()">Change Content</button>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!-- Dynamicaly Change image  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        text-align: center;
+        margin-top: 30px;
+      }
+      .btn-grp{
+        margin-top: 20px;
+      }
+    </style>
+    <script>
+        function changeImgToAngular(){
+            document.querySelector("#img").src = "https://openclipart.org/image/2400px/svg_to_png/272339/angular.png"
+            document.getElementById("btn-angulr").disabled = true
+            document.getElementById("btn-react").disabled = false
+        }
+        function changeImgToReact(){
+            document.querySelector("#img").src = "https://th.bing.com/th/id/R.971904fa310a88b1e3c331df20180c65?rik=y%2bfGItjI9Lkdig&riu=http%3a%2f%2fjpie.nz%2fassets%2fimages%2f2020%2f10%2freact-logo.png&ehk=AebbAgjYLkWS5M2mk5uMbiWHNJv80LL8EExLQWltDNg%3d&risl=&pid=ImgRaw&r=0"
+            document.getElementById("btn-angulr").disabled = false
+            document.getElementById("btn-react").disabled = true
+        }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        id="img"
+        src="https://th.bing.com/th/id/R.971904fa310a88b1e3c331df20180c65?rik=y%2bfGItjI9Lkdig&riu=http%3a%2f%2fjpie.nz%2fassets%2fimages%2f2020%2f10%2freact-logo.png&ehk=AebbAgjYLkWS5M2mk5uMbiWHNJv80LL8EExLQWltDNg%3d&risl=&pid=ImgRaw&r=0"
+        width="300"
+        height="300"
+      />
+
+      <div class="btn-grp">
+        <button id="btn-react" onclick="changeImgToReact()" >React</button>
+        <button id="btn-angulr" onclick="changeImgToAngular()">Angular</button>
+      </div>
+    </div>
+  </body>
+</html>

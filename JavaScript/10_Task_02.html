@@ -1,0 +1,47 @@
+<!-- Task: show / Hide password -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+      .container {
+        text-align: center;
+        background-color: white;
+        width: 300px;
+        margin: 100px auto;
+        box-shadow: 0 0 10px rgb(132, 129, 129);
+        padding: 50px;
+      }
+    </style>
+    <script>
+        function showHidePass(){
+            var inputRef = document.querySelector("#password");
+            var btnRef = document.getElementById("btn");
+
+            if(inputRef.type === "password"){
+                inputRef.type = "text"
+                btnRef.innerText = "Hide Password"
+            }
+            else{
+                inputRef.type = "password"
+                btnRef.innerText = "Show Password"
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+
+      <div>
+        <input id="password" type="password" />
+        <button id="btn" onclick="showHidePass()">Show Password</button>
+      </div>
+    </div>
+  </body>
+</html>
